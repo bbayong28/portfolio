@@ -2,7 +2,7 @@ $(function(){
 //-------------------------------
 
 new fullpage('#fullpage', {
-    anchors: ['main', 'about','project01', 'project02', 'project03', 'contact'],
+    anchors: ['main', 'project01', 'project02', 'project03', 'project04', 'contact'],
     keyboardScrolling: true,
     //responsiveWidth:769,
 
@@ -34,7 +34,19 @@ new fullpage('#fullpage', {
         $('.menu').removeAttr("style");
         $('.section').eq(destination.index).addClass('on').siblings().removeClass('on');
     
-   });
+  });
+  
+  $(".js_slider").slick({
+        arrows:false,
+        dots: true,
+    
+  });
+  $('.jsArrow i:nth-child(1)').on('click', function () {
+      $('.js_slider').slick('slickPrev')
+  });
+  $('.jsArrow i:nth-child(2)').on('click', function () {
+      $('.js_slider').slick('slickNext')
+  });
 
 
 //-------------------------------
