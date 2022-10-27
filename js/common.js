@@ -38,7 +38,7 @@ new fullpage('#fullpage', {
   
   $(".js_slider").slick({
         arrows:false,
-        dots: true,
+        dots: false,
     
   });
   $('.jsArrow i:nth-child(1)').on('click', function () {
