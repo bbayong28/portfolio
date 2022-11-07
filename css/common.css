@@ -6,13 +6,7 @@ body {
     font-family: 'Urbanist', sans-serif;
 }
 
-#wrap {}
-
-/* @keyframes move_wave{
-        0%{transform:translateX(0) translateZ(0) scaleY(0.7)}
-        50%{transform:translateX(-25%) translateZ(0) scaleY(0.55)}
-        100%{transform:translateX(-50%) translateZ(0) scaleY(0.7)}
-} */
+/* main 배경 */
 @keyframes move_wave{
         0%{transform:translateX(0) translateZ(0) scaleY(0.7)} 
         50%{transform:translateX(-50%) translateZ(0) scaleY(0.7)}
@@ -33,8 +27,7 @@ body {
     overflow: hidden;
     height: 100%;
     bottom: -1px;
-}
-    
+}    
 .wave{    
     position: absolute;
     left: 0;
@@ -84,7 +77,6 @@ body {
     border: none;
     background: transparent; 
 }
-
 #header .menu_icon::before {
     content: "";
     position: absolute;
@@ -94,7 +86,6 @@ body {
     height: 2px;
     background: #333;
 }
-
 #header .menu_icon::after {
     content: "";
     position: absolute;
@@ -104,13 +95,10 @@ body {
     height: 2px;
     background: #333;
 }
-
 #header .menu_icon.on::before,
 #header .menu_icon.on::after{
     display: none;
 }
-
-
 #header .menu_icon span::before,
 #header .menu_icon span::after{
     content: "";
@@ -130,6 +118,7 @@ body {
     background:#fff;
 }
 
+/* cover */
 #header .cover {
     display:none;
     position:absolute;
@@ -143,26 +132,22 @@ body {
     padding:20vh 0;
     z-index:999;
 }
-
 #header .cover .co_top {
     width:1400px;
     margin:0 auto;
     line-height:100px;
     font-size:30px;
 }
-
 #header .cover .co_center {
     width:1600px;
     margin:100px auto;
 }
-
 #header .cover .co_center .menu {
     display:flex;
     justify-content:space-between;
     text-align:center;
     padding:15px;
 }
-
 #header .cover .co_center .menu>li {
     flex:1;
     padding:10px 75px;
@@ -171,7 +156,6 @@ body {
 #header .cover .co_center .menu>li>a {
     display:block;
 }
-
 #header .cover .co_center .menu>li .con_title {
     position: relative;
     display:block;
@@ -185,7 +169,6 @@ body {
     color:rgba(255, 255, 255, 0.5);
     font-weight: 100;
 } 
-
 #header .cover .co_bottom {
     width:1400px;
     margin:0 auto;
@@ -193,6 +176,7 @@ body {
     font-size:30px;
 }
 
+/* gnb */
 #header .gnb {
     position:fixed;
     bottom:30px;
@@ -217,7 +201,6 @@ body {
     background:rgba(0,0,0,0.1);
     margin:5px 15px 0 15px;
 }
-
 #header .gnb a.on .tab {
     background:#5880ef;
     transform:scale(1.2);
@@ -259,89 +242,232 @@ body {
 }
 /* 공통 */
 .cover{
+    display: flex;
     background: #F7EEE5;
     width: 100%;
     height: 100vh;
 }
-/* js_pf */
+.cover h2 {
+    position:absolute;
+    top:50%;
+    right:30px;
+    font-size:26px;
+    writing-mode:vertical-rl;
+    font-weight:300;
+}
+
+.fixLeft{
+    position: relative;
+    width: 60%;
+    height: 100vh;
+    padding: 13% 0 0 6%;
+    /* transform: translateX(60%); */
+    transform: translateX(-100%);
+    transition: 0.5s 0.5s;
+    opacity: 0;
+}
+.section.on .fixLeft {
+    transform: translateX(0);
+    opacity:1;
+}
+.fixRight {
+    width:40%;
+    padding:50px;
+    transform:translateX(100%);
+    transition: 1s 1s;
+    opacity:0;
+    z-index:999;
+}
+.section.on .fixRight {
+    transform: translateX(0);
+    opacity:1;
+}
+.desBox{
+    background: #fff;
+    position:absolute;
+    bottom:15%;
+    left:20%;
+    width:550px;
+    padding:30px;
+    font-family:'Noto Sans KR',sans-serif;line-height:1.6;
+    font-size:14px;
+    transform:translateX(-100px);
+    transition:1s 2s;
+    /* opacity:0; */
+    opacity:1;
+}
+
+.desBox dl dt {
+    font-weight:500;
+    float:left;
+    width:60px;
+}
+.desBox dl dd {
+    font-weight:300;
+}
+.desBox span {
+    margin-bottom:30px;
+    clear:left;
+    font-size:13px;
+}
+.desBox dl .color {
+    display:inline-block;
+    width:15px;
+    height:15px;
+    border-radius:50%;
+    margin:5px 5px 0 0;
+}
+.section.on .des_box {
+    transform:translateY(0);
+    opacity:1;
+}
+
+.mock {
+    position:relative
+    ;margin-bottom:30px;
+}
+.mock .mobile {
+    position:absolute;
+    bottom:-20px;
+    left:-20px;
+    width:250px;
+    height:354px;
+    background:url(../img/mobile.png) no-repeat center top / cover ;
+    padding:34px 25px 29px 75px;transform:translateY(-100px);
+    opacity:0;
+    transition:1s 2s;
+}
+.moCover {
+    position:relative;
+    width:100%;
+    height:283px;
+    overflow:hidden;
+    border-radius:15px;
+}
+.mock .moCover .mImg {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    cursor:pointer;
+    transition:7s;
+}
+.mock .moCover .mImg:hover {
+    transform:translateY(-100%);
+    top:100%;
+}
+.mock .moCover .moTop {
+    position:absolute;
+    top:-2px;
+    left:30px;
+    width:91px;
+    height:13px;
+}
+.mock .pc {
+    background: url(../img/pc.png) no-repeat center center / cover;
+    width: 780px;
+    height: 490px;
+    padding: 27px 86px 57px 77px;
+    margin: 0 auto;
+}
+.mock .pcCover {
+    position:relative;
+    width:100%;    
+    height: 416px;
+    border-radius: 10px;
+    overflow:hidden;
+}
+.mock .pcCover img {
+    position:absolute;
+    top:0;left:0;
+    width:100%;
+    cursor:pointer;
+    transition:5s;
+}
+.mock .pcCover img:hover {
+    transform:translateY(-100%);
+    top:100%;
+}
+.section.on .mock .mobile {
+    transform:translateY(0);
+    opacity:1;
+}
+.btn {
+    text-align:center;
+    margin-bottom:30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn a {
+    display:block;
+    width:200px;
+    height:50px;
+    margin:0 10px;
+    font-size:14px;
+    border:1px solid #ddd;
+    line-height:50px;
+    font-weight:600;
+    transition:0.5s;
+}
+.btn a:hover {
+    border:1px solid #0c0c0c;
+    background:#333;
+    color:#fff;
+}
+.stx {
+    display:block;
+    color:var(--stx);
+    font-size:12px;
+    line-height:1.4;
+    font-family:'Noto Sans KR',sans-serif;text-align:center;
+}
+
+
+
+/* pf01 */
+.pf01 .cover {
+    background:url(../img/cover_bg01.jpg) no-repeat center center/cover;
+}
+.pf01 .fixRight {
+    background:linear-gradient(180deg, rgba(178,218,255,1) 6%, rgba(237,237,236,1) 77%, rgba(214,206,226,1) 100%);
+}
+.pf01 .itm01 {
+    background:#fff;
+}
+.pf01 .itm02 {
+    background:#f9f9f9;
+}
+.pf01 .itm03 {
+    background:#dddddd;
+}
+.pf01 .itm04 {
+    background:#333;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .js_pf .cover{
     position: relative;
 }
-.js_pf .inner{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: 1600px;
-    height: 700px;
-    background:rgba(255, 255, 255, 0.4);
-    border-radius: 30px;
-    box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.08);
-}
-
-.js_pf .inner .js_slide{
-    display: flex;
-    align-items: center;
-}
-.js_pf .inner .js_slide .left{
-    flex: 1;
-}
-
-.js_pf .inner .js_slide .right{
-    flex: 1;
-    position: relative;
-}
-                    
-.js_pf .inner .js_slide .right .mockup .pc{
-    background: url(../img/pc.png) no-repeat center center / cover;
-    width: 604px;
-    height: 420px;
-    padding: 43px 68px 68px 60px;
-    margin: 0 auto;
-}
-.js_pf .inner .js_slide .right .mockup .pc_cover{
-    position: relative;
-    width: 100%;
-    height: 318px;
-    overflow: hidden;
-}
-.js_pf .inner .js_slide .right .mockup .pc_cover img{
-    border: 0;
-    vertical-align: middle;
-    font-size: 0;
-    border-radius: 10px;
-    max-width: 100%
-}
-.js_pf .inner .js_slide .right .mockup .mobile{
-    background: url(../img/mobile.png) no-repeat center center / cover; 
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    width: 178px;
-    height: 251px;
-    padding: 25px 19px 29px 55px;
-    /* transform: translateY(-100px);
-    opacity: 0;
-    transition: 1s 2s; */
-}
-.js_pf .inner .js_slide .right .mockup .mobile .mobile_cover{
-    position: relative;
-    width: 100%;
-    height: 198px;
-    overflow: hidden;
-    border-radius: 10px;
-}
-.js_pf .inner .js_slide .right .mockup .mobile .mobile_cover .mo_top{
-    position: absolute;
-    top: -2px;
-    left: 18px;
-    width: 70px;
-    height: 10px;
-}
-
-
 
 
 
@@ -527,7 +653,7 @@ body {
 }
 
     .main .wheel {display:none;}
- 
+
     /* 공통 **
     .cover {
         display:flex;
