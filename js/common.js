@@ -2,7 +2,7 @@ $(function(){
 //-------------------------------
 
 new fullpage('#fullpage', {
-    anchors: ['main', 'project01', 'project02', 'project03', 'project04', 'project05','practice_site','practice_skill','contact'],
+    anchors: ['main', 'project01', 'project02', 'project03', 'project04', 'project05', 'project06', 'project07', 'project08', 'about'],
     keyboardScrolling: true,
     //responsiveWidth:769,
 
@@ -34,18 +34,6 @@ new fullpage('#fullpage', {
         $('.menu').removeAttr("style");
         $('.section').eq(destination.index).addClass('on').siblings().removeClass('on');
     
-  });
-  
-  $(".js_slider").slick({
-        arrows:false,
-        dots: false,
-    
-  });
-  $('.jsArrow i:nth-child(1)').on('click', function () {
-      $('.js_slider').slick('slickPrev')
-  });
-  $('.jsArrow i:nth-child(2)').on('click', function () {
-      $('.js_slider').slick('slickNext')
   });
 
 
