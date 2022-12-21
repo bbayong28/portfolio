@@ -277,7 +277,7 @@ body {
 .section.on .fixLeft {
     transform: translateX(0);
     opacity:1;
-    background:#F7EEE5 ;
+    background:#fff ;
 }
 .fixRight {
     width:40%;
@@ -435,11 +435,10 @@ body {
 
 /* pf01 */
 #pf01 .cover {
-    /* background: #F7EEE5; */
     background: url(../img/hanhwa_cover.png)no-repeat center center/cover; 
 }
 #pf01 .fixRight {
-    background:linear-gradient(180deg, rgba(178,218,255,1) 6%, rgba(237,237,236,1) 77%, rgba(214,206,226,1) 100%);
+    background:linear-gradient(180deg, rgba(178,218,255,1) 6%, rgba(237,237,236,1) 77%, rgb(214, 237, 249) 100%);
 }
 #pf01 .itm01 {
     background:#fff;
@@ -458,7 +457,7 @@ body {
     background: url(../img/jacksonchameleon_cover.png)no-repeat center center/cover; 
 }
 #pf02 .fixRight {
-    background:linear-gradient(180deg, rgba(178,218,255,1) 6%, rgba(237,237,236,1) 77%, rgba(214,206,226,1) 100%);
+    background:linear-gradient(180deg, rgb(218, 179, 110) 8%, rgb(212, 153, 70)60%, rgb(255, 240, 216) 100%);
 }
 #pf02 .itm01 {
     background:#fff;
@@ -477,7 +476,7 @@ body {
     background: url(../img/kooksarang_cover.png)no-repeat center center/cover; 
 }
 #pf03 .fixRight {
-    background:linear-gradient(180deg, rgba(178,218,255,1) 6%, rgba(237,237,236,1) 77%, rgba(214,206,226,1) 100%);
+    background:linear-gradient(180deg, rgb(171, 198, 129) 6%, rgb(96, 125, 66) 77%, rgb(209, 255, 194) 100%);
 }
 #pf03 .itm01 {
     background:#fff;
@@ -496,7 +495,7 @@ body {
     background: url(../img/massimodutti_cover.png)no-repeat center center/cover; 
 }
 #pf04 .fixRight {
-    background:linear-gradient(180deg, rgba(178,218,255,1) 6%, rgba(237,237,236,1) 77%, rgba(214,206,226,1) 100%);
+    background:linear-gradient(180deg, rgb(249, 205, 109) 6%, rgb(255, 236, 196) 77%, rgb(229, 226, 139) 100%);
 }
 #pf04 .itm01 {
     background:#fff;
@@ -510,12 +509,12 @@ body {
 #pf04 .itm04 {
     background:#333;
 }
-/* pf045*/
+/* pf05*/
 #pf05 .cover {
     background: url(../img/metaquest_cover.png)no-repeat center center/cover; 
 }
 #pf05 .fixRight {
-    background:linear-gradient(180deg, rgba(178,218,255,1) 6%, rgba(237,237,236,1) 77%, rgba(214,206,226,1) 100%);
+    background:linear-gradient(180deg, rgb(189, 150, 216) 6%, #e6d1ff 77%, rgb(242, 201, 236) 100%);
 }
 #pf05 .itm01 {
     background:#fff;
@@ -527,6 +526,44 @@ body {
     background:#dddddd;
 }
 #pf05 .itm04 {
+    background:#333;
+}
+/* pf06*/
+#pf06 .cover {
+    background: url(../img/anaticove_cover.png)no-repeat center center/cover; 
+}
+#pf06 .fixRight {
+    background:linear-gradient(180deg, rgb(189, 150, 216) 6%, #e6d1ff 77%, rgb(242, 201, 236) 100%);
+}
+#pf06 .itm01 {
+    background:#fff;
+}
+#pf06 .itm02 {
+    background:#f9f9f9;
+}
+#pf06 .itm03 {
+    background:#dddddd;
+}
+#pf06 .itm04 {
+    background:#333;
+}
+/* pf07*/
+#pf07 .cover {
+    background: url(../img/kakaobank_cover.png)no-repeat center center/cover; 
+}
+#pf07 .fixRight {
+    background:linear-gradient(180deg, rgb(213, 205, 58) 6%, rgb(230, 226, 150)77%, rgb(199, 191, 121) 100%);
+}
+#pf07 .itm01 {
+    background:#fff;
+}
+#pf07 .itm02 {
+    background:#f9f9f9;
+}
+#pf07 .itm03 {
+    background:#dddddd;
+}
+#pf07 .itm04 {
     background:#333;
 }
 

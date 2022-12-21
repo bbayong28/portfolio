@@ -37,6 +37,7 @@ body {
   letter-spacing: -0.025em;
   color: #222222;
   font-size: 1.6rem;
+  overflow-x: hidden;
 }
 
 ul,
