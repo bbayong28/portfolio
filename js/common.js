@@ -2,7 +2,7 @@ $(function(){
 //-------------------------------
 
 new fullpage('#fullpage', {
-    anchors: ['main', 'project01', 'project02', 'project03', 'project04', 'project05', 'project06', 'project07', 'project08', 'about'],
+    anchors: ['main', 'project01', 'project02', 'project03', 'project04', 'project05', 'project06', 'project07', 'project08', 'project09', 'about'],
     keyboardScrolling: true,
     //responsiveWidth:769,
 
